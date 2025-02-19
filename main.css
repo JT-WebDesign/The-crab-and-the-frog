@@ -1,0 +1,51 @@
+html {
+    font-size: 30px
+ }
+
+ body {
+ 
+    background-image: url(303587E3-8F9D-4911-97D4-F081F312D888_1_105_c.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color:black;
+    text-align: center;
+    
+}
+/* Style the tooltip container */
+span[title] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tooltip text (hidden by default) */
+span[title]:hover::after {
+    content: attr(title); /* Display the title attribute content */
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+    background-color: black; /* Tooltip background */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px; /* Tooltip width */
+    font-size: 18px; /* Font size */
+    bottom: 120%; /* Position it above the element */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Make tooltip fade in */
+span[title]:hover::after {
+    opacity: 1;
+}
+span {
+    display: block;  /* Forces each span to be on a new line */
+  }
